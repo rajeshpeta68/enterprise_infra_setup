@@ -9,5 +9,5 @@ module "networking" {
 
 module "compute" {
   source = "./modules/compute"
-  vpc_id = module.networking.vpc_id 
+  vpc_id = module.networking.vpc_id
 }
