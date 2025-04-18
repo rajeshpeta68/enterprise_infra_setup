@@ -1,5 +1,10 @@
 variable "aws_region" {
-  description = "The AWS region to create resources in"
-  type        = string
-  default     = "ap-south-1"
+type = map(string)
+default = {
+  default = "ap-south-1"
+  dev = "ap-southease-1"
+  stage = "us-east-1"
+  prod = "us-west-1"
 }
+}
+
