@@ -15,3 +15,9 @@ module "compute" {
   aws_security_group_id_ent_ec2_sg = module.networking.aws_security_group_id_ent_ec2_sg
   aws_security_group_id_ent_alb_sg = module.networking.aws_security_group_id_ent_alb_sg
 }
+
+module "database" {
+  source = "./modules/database"
+  ent_private_subnet_ids = module.networking.ent_private_subnet_ids
+  aws_security_group_id_ent_rds_sg = module.networking.aws_security_group_id_ent_rds_sg  
+}
