@@ -8,3 +8,13 @@ default = {
 }
 }
 
+variable "rds_username" {
+  type        = string
+  description = "RDS DB username"
+}
+
+variable "rds_password" {
+  type        = string
+  description = "RDS DB password"
+  sensitive   = true
+}

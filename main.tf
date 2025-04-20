@@ -19,5 +19,7 @@ module "compute" {
 module "database" {
   source = "./modules/database"
   ent_private_subnet_ids = module.networking.ent_private_subnet_ids
-  aws_security_group_id_ent_rds_sg = module.networking.aws_security_group_id_ent_rds_sg  
+  aws_security_group_id_ent_rds_sg = module.networking.aws_security_group_id_ent_rds_sg
+  rds_password = var.rds_password
+  rds_username = var.rds_username
 }

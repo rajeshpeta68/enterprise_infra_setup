@@ -33,12 +33,12 @@ variable "rds_storage_type" {
 variable "rds_username" {
   description = "The username for the database"
   type        = string
-  default     = "admin"  
+  #default     = "admin"  
 }
 variable "rds_password" {
   description = "The password for the database"
   type        = string
-  default     = "password"  
+  #default     = "password"  
 }
 variable "aws_security_group_id_ent_rds_sg" {
   description = "The ID of the security group for the RDS instance"
